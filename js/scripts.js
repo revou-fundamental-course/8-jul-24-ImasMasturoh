@@ -1,4 +1,5 @@
-// ini js
+//Ini js//
+//Menetukan konstanta
 const tinggiBadan=document.getElementById("input-tinggi-badan");
 const usia = document.getElementById("input-usia");
 const beratBadan = document.getElementById("input-berat-badan");
@@ -18,7 +19,7 @@ function klasifikasiBmi(bmi) {
     }
 }
 
-// Perhitungan dan menampilkan hasil pada page
+// Perhitungan dan menampilkan hasil pada html page
 function hitungBmi(event) {
     event.preventDefault(); // Mencegah form dari submit secara default
 
@@ -36,8 +37,8 @@ function hitungBmi(event) {
     bmi = bmi.toFixed(1);
 
     hasilBmiElement.textContent = bmi;
-    kategoriBmiElement.textContent = ${klasifikasiBmi(parseFloat(bmi))};
-    dataUserElement.textContent = ${usi};
+    kategoriBmiElement.textContent = `${klasifikasiBmi(parseFloat(bmi))}`;
+    dataUserElement.textContent = `${usi}`;
     jenisKelaminElement.textContent = jenisKelamin.value;
     
 }
@@ -54,3 +55,6 @@ function resetForm() {
 // Event Submit dan Reset
 document.getElementById('bmi-form').addEventListener('submit', hitungBmi);
 document.getElementById('reset-button').addEventListener('click', resetForm);
+
+
+
